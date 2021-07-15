@@ -83,8 +83,7 @@ The user inputs mood entries that align with a color, enabling them to track the
 * Mini games -> null
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://github.com/stormmwright/Aura/blob/main/Aura%20Wireframes.JPG" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
@@ -131,3 +130,6 @@ User
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
 ## Project Plan
+<img src="https://github.com/stormmwright/Aura/blob/main/Aura%20Project%20Plan.JPG" width=600>
+
+<img src="https://github.com/stormmwright/Aura/blob/main/Aura%20Project%20Plan%202.JPG" width=600>
