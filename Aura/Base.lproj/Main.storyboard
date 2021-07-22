@@ -266,7 +266,7 @@
         <!--Home-->
         <scene sceneID="fCX-Rr-skt">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="jEi-cp-BuV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" modalPresentationStyle="fullScreen" id="jEi-cp-BuV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="house" catalog="system" id="19J-do-CgD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rDZ-HA-6OO">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
