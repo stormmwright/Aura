@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5DC372E3FD8FAC1076EDA9AC /* Pods_Aura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCB9621AF3EA9854102EA3F /* Pods_Aura.framework */; };
 		82F26A7D26A0AC7100AFFCFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A7C26A0AC7100AFFCFD /* AppDelegate.m */; };
 		82F26A8026A0AC7100AFFCFD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A7F26A0AC7100AFFCFD /* SceneDelegate.m */; };
-		82F26A8326A0AC7100AFFCFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A8226A0AC7100AFFCFD /* ViewController.m */; };
 		82F26A8626A0AC7100AFFCFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82F26A8426A0AC7100AFFCFD /* Main.storyboard */; };
 		82F26A8826A0AC7200AFFCFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82F26A8726A0AC7200AFFCFD /* Assets.xcassets */; };
 		82F26A8B26A0AC7200AFFCFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82F26A8926A0AC7200AFFCFD /* LaunchScreen.storyboard */; };
@@ -52,8 +51,6 @@
 		82F26A7C26A0AC7100AFFCFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		82F26A7E26A0AC7100AFFCFD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		82F26A7F26A0AC7100AFFCFD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		82F26A8126A0AC7100AFFCFD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		82F26A8226A0AC7100AFFCFD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82F26A8526A0AC7100AFFCFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82F26A8726A0AC7200AFFCFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82F26A8A26A0AC7200AFFCFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,8 +103,21 @@
 				FE71E1F19B47C9B7DC2297D3 /* Pods-AuraTests.debug.xcconfig */,
 				2158FDDAD06B8355C86CA5F6 /* Pods-AuraTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8286C94126A9FE8200719F5D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8286C94226A9FEC200719F5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		82F26A6F26A0AC7100AFFCFD = {
@@ -135,12 +145,12 @@
 		82F26A7A26A0AC7100AFFCFD /* Aura */ = {
 			isa = PBXGroup;
 			children = (
+				8286C94226A9FEC200719F5D /* Models */,
+				8286C94126A9FE8200719F5D /* View Controllers */,
 				82F26A7B26A0AC7100AFFCFD /* AppDelegate.h */,
 				82F26A7C26A0AC7100AFFCFD /* AppDelegate.m */,
 				82F26A7E26A0AC7100AFFCFD /* SceneDelegate.h */,
 				82F26A7F26A0AC7100AFFCFD /* SceneDelegate.m */,
-				82F26A8126A0AC7100AFFCFD /* ViewController.h */,
-				82F26A8226A0AC7100AFFCFD /* ViewController.m */,
 				82F26A8426A0AC7100AFFCFD /* Main.storyboard */,
 				82F26A8726A0AC7200AFFCFD /* Assets.xcassets */,
 				82F26A8926A0AC7200AFFCFD /* LaunchScreen.storyboard */,
@@ -415,7 +425,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F26A8326A0AC7100AFFCFD /* ViewController.m in Sources */,
 				82F26A7D26A0AC7100AFFCFD /* AppDelegate.m in Sources */,
 				82F26A8E26A0AC7200AFFCFD /* main.m in Sources */,
 				82F26A8026A0AC7100AFFCFD /* SceneDelegate.m in Sources */,
