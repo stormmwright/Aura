@@ -15,12 +15,13 @@
 @implementation AppDelegate
 
 
+// configure and connect Parse server to project
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     ParseClientConfiguration *config = [ParseClientConfiguration  configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
 
-        configuration.applicationId = @"CTciAQcLfgi4xSOxZaP4zUPXEEuSvkI5SmnBsYPi"; // <- UPDATE
-        configuration.clientKey = @"hFfIm5o7XRyFiuWQRAMmWVjaiQviYD90FNNKj27Y"; // <- UPDATE
+        configuration.applicationId = @"CTciAQcLfgi4xSOxZaP4zUPXEEuSvkI5SmnBsYPi"; // App Id
+        configuration.clientKey = @"hFfIm5o7XRyFiuWQRAMmWVjaiQviYD90FNNKj27Y"; // Client Key
         configuration.server = @"https://parseapi.back4app.com";
     }];
 
@@ -28,7 +29,6 @@
     
     return YES;
 }
-
 
 #pragma mark - UISceneSession lifecycle
 
