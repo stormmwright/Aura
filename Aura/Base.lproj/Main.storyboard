@@ -309,24 +309,71 @@
             </objects>
             <point key="canvasLocation" x="689" y="72"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="2zG-xY-hiD">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="NqD-6n-aSl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="NqD-6n-aSl" customClass="SignUpViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hil-tJ-rNr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BTL-6R-1gG">
+                                <rect key="frame" x="16" y="384" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0l-ii-JiR">
+                                <rect key="frame" x="16" y="468" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFj-oz-Fda">
+                                <rect key="frame" x="16" y="426" width="358" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crh-fh-KUP">
+                                <rect key="frame" x="168" y="511" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="NqD-6n-aSl" eventType="touchUpInside" id="2oa-Ns-Txp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoF-3u-8e4">
+                                <rect key="frame" x="136" y="304" width="118" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="t0C-TE-6y1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5Qf-h9-aJK" appends="YES" id="DMe-xQ-jA5"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Wk7-HT-7mh"/>
                     <connections>
-                        <segue destination="jEi-cp-BuV" kind="presentation" id="on2-YR-l7d"/>
+                        <outlet property="email" destination="jFj-oz-Fda" id="gzs-8C-N7T"/>
+                        <outlet property="password" destination="d0l-ii-JiR" id="UzK-vy-E68"/>
+                        <outlet property="username" destination="BTL-6R-1gG" id="vQo-pg-n2j"/>
+                        <segue destination="jEi-cp-BuV" kind="presentation" identifier="signUpSegue" id="on2-YR-l7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKi-tu-YBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5Qf-h9-aJK">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="NqD-6n-aSl" id="afr-hE-JDA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="20" y="737"/>
+            <point key="canvasLocation" x="20" y="736.49289099526061"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cqo-DQ-JHG">
@@ -345,7 +392,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cZY-Bc-VIK"/>
+        <segue reference="on2-YR-l7d"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="90"/>

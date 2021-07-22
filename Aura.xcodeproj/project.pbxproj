@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5DC372E3FD8FAC1076EDA9AC /* Pods_Aura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCB9621AF3EA9854102EA3F /* Pods_Aura.framework */; };
 		8286C94526AA0EB800719F5D /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C94426AA0EB800719F5D /* LogInViewController.m */; };
+		8286C94826AA1B9000719F5D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C94726AA1B9000719F5D /* SignUpViewController.m */; };
 		82F26A7D26A0AC7100AFFCFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A7C26A0AC7100AFFCFD /* AppDelegate.m */; };
 		82F26A8026A0AC7100AFFCFD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A7F26A0AC7100AFFCFD /* SceneDelegate.m */; };
 		82F26A8626A0AC7100AFFCFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82F26A8426A0AC7100AFFCFD /* Main.storyboard */; };
@@ -49,6 +50,8 @@
 		8089A667749BBF3A35A8F03F /* Pods-Aura-AuraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aura-AuraUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aura-AuraUITests/Pods-Aura-AuraUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8286C94326AA0EB800719F5D /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		8286C94426AA0EB800719F5D /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		8286C94626AA1B9000719F5D /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		8286C94726AA1B9000719F5D /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		82F26A7826A0AC7100AFFCFD /* Aura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F26A7B26A0AC7100AFFCFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82F26A7C26A0AC7100AFFCFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 			children = (
 				8286C94326AA0EB800719F5D /* LogInViewController.h */,
 				8286C94426AA0EB800719F5D /* LogInViewController.m */,
+				8286C94626AA1B9000719F5D /* SignUpViewController.h */,
+				8286C94726AA1B9000719F5D /* SignUpViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8286C94526AA0EB800719F5D /* LogInViewController.m in Sources */,
+				8286C94826AA1B9000719F5D /* SignUpViewController.m in Sources */,
 				82F26A7D26A0AC7100AFFCFD /* AppDelegate.m in Sources */,
 				82F26A8E26A0AC7200AFFCFD /* main.m in Sources */,
 				82F26A8026A0AC7100AFFCFD /* SceneDelegate.m in Sources */,

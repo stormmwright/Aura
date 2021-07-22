@@ -1,44 +1,48 @@
 //
-//  LogInViewController.m
+//  SignUpViewController.m
 //  Aura
 //
 //  Created by Storm Wright on 7/22/21.
 //
 
-#import "LogInViewController.h"
+#import "SignUpViewController.h"
 #import "Parse/Parse.h"
 
-@interface LogInViewController ()
+@interface SignUpViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 
 @end
 
-@implementation LogInViewController
+@implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
-- (IBAction)logIn:(id)sender {
-    NSString *username = self.username.text;
-    NSString *password = self.password.text;
+- (IBAction)signUp:(id)sender {
+    PFUser *newUser = [PFUser user];
     
-    [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
+    newUser.username = self.username.text;
+    newUser.email = self.email.text;
+    newUser.password = self.password.text;
+    
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
-            NSLog(@"User log in failed: %@", error.localizedDescription);
+            NSLog(@"Error: %@", error.localizedDescription);
         } else {
-            NSLog(@"User logged in successfully");
+            NSLog(@"User registered successfully");
             
-            // display home view controller after successful log in
-            [self performSegueWithIdentifier:@"logInSegue" sender:nil];
+            [self performSegueWithIdentifier:@"signUpSegue" sender:nil];
         }
     }];
 }
 
 - (IBAction)hideKeyboard:(id)sender {
     [self.username endEditing:true];
+    [self.email endEditing:true];
     [self.password endEditing:true];
 }
 
