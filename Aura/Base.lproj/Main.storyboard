@@ -55,7 +55,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up."/>
                                 <connections>
-                                    <segue destination="NqD-6n-aSl" kind="show" id="wax-9h-A4H"/>
+                                    <segue destination="NqD-6n-aSl" kind="show" id="i1E-39-z8K"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Qs-a7-xPW">
@@ -85,35 +85,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="20" y="71.800947867298575"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="LDi-Sp-Mbc">
-            <objects>
-                <tableViewController id="Cwx-55-obC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CyD-Ww-xcf">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9b8-EK-8qb">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9b8-EK-8qb" id="IyF-2w-k0G">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Cwx-55-obC" id="8pg-EE-Ma4"/>
-                            <outlet property="delegate" destination="Cwx-55-obC" id="3CV-f8-BhG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="P9k-Ck-e9T"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t8b-bk-kfG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1362" y="72"/>
         </scene>
         <!--Stats-->
         <scene sceneID="Afm-rc-GOr">
@@ -302,12 +273,39 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Cwx-55-obC" kind="relationship" relationship="rootViewController" id="3ig-0t-pGw"/>
+                        <segue destination="tLF-Sg-L5y" kind="relationship" relationship="rootViewController" id="J3B-sD-f7s"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tco-RH-QXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="689" y="72"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="BWK-N9-ACa">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="tLF-Sg-L5y" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrz-Qu-2cS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="asM-Fu-MHs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jEt-z0-sav">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="BCA-YL-kkt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Fei-4h-79A">
+                                <rect key="frame" x="16" y="7" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="r68-SZ-nzp"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56s-vQ-Hsb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361.5384615384614" y="71.800947867298575"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="2zG-xY-hiD">
@@ -392,7 +390,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="on2-YR-l7d"/>
+        <segue reference="JpL-y7-fkA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="chart.bar" catalog="system" width="128" height="90"/>
