@@ -140,6 +140,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		8286C95226AB603800719F5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		82F26A6F26A0AC7100AFFCFD = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +172,7 @@
 		82F26A7A26A0AC7100AFFCFD /* Aura */ = {
 			isa = PBXGroup;
 			children = (
+				8286C95226AB603800719F5D /* Views */,
 				8286C94226A9FEC200719F5D /* Models */,
 				8286C94126A9FE8200719F5D /* View Controllers */,
 				82F26A7B26A0AC7100AFFCFD /* AppDelegate.h */,

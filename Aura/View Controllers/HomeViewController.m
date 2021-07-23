@@ -7,7 +7,9 @@
 
 #import "HomeViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -15,7 +17,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 7;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *identifier = @"";
+    
+    if (indexPath.row == 0) {
+        identifier = @"BestCell";
+    } else if (indexPath.row == 1) {
+        identifier = @"VeryGoodCell";
+    } else if (indexPath.row == 2) {
+        identifier = @"GoodCell";
+    } else if (indexPath.row == 3) {
+        identifier = @"NeutralCell";
+    } else if (indexPath.row == 4) {
+        identifier = @"BadCell";
+    } else if (indexPath.row == 5) {
+        identifier = @"VeryBadCell";
+    } else {
+        identifier = @"WorstCell";
+    }
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    return cell;
 }
 
 /*
