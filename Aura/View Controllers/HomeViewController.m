@@ -6,6 +6,7 @@
 //
 
 #import "HomeViewController.h"
+#import "Entry.h"
 
 @interface HomeViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -29,6 +30,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"";
     
+    // create util function that takes in indexPath.row and returns identifier
     if (indexPath.row == 0) {
         identifier = @"BestCell";
     } else if (indexPath.row == 1) {
@@ -48,6 +50,91 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     return cell;
+}
+
+// ask about efficiency of seperate buttons and segues during office hours
+- (IBAction)enterBest:(id)sender {
+    NSString *mood = @"Best";
+    
+    [Entry logUserEntry:mood withCompletion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully logged entry");
+        } else {
+            NSLog(@"error %@", error);
+        }
+    }];
+}
+
+- (IBAction)enterVeryGood:(id)sender {
+    NSString *mood = @"Very Good";
+    
+    [Entry logUserEntry:mood withCompletion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully logged entry");
+        } else {
+            NSLog(@"error %@", error);
+        }
+    }];
+}
+
+- (IBAction)enterGood:(id)sender {
+    NSString *mood = @"Good";
+    
+    [Entry logUserEntry:mood withCompletion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully logged entry");
+        } else {
+            NSLog(@"error %@", error);
+        }
+    }];
+}
+
+- (IBAction)enterNeutral:(id)sender {
+    NSString *mood = @"Neutral";
+    
+    [Entry logUserEntry:mood withCompletion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully logged entry");
+        } else {
+            NSLog(@"error %@", error);
+        }
+    }];
+}
+
+- (IBAction)enterBad:(id)sender {
+    NSString *mood = @"Bad";
+    
+    [Entry logUserEntry:mood withCompletion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully logged entry");
+        } else {
+            NSLog(@"error %@", error);
+        }
+    }];
+}
+
+- (IBAction)enterVeryBad:(id)sender {
+    NSString *mood = @"Very Bad";
+    
+    [Entry logUserEntry:mood withCompletion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully logged entry");
+        } else {
+            NSLog(@"error %@", error);
+        }
+    }];
+}
+
+- (IBAction)enterWorst:(id)sender {
+    NSString *mood = @"Worst";
+    
+    [Entry logUserEntry:mood withCompletion:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully logged entry");
+        } else {
+            NSLog(@"error %@", error);
+        }
+    }];
 }
 
 /*

@@ -89,7 +89,6 @@
         <!--Stats-->
         <scene sceneID="Afm-rc-GOr">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="biQ-Dk-etl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="la9-FR-Yuh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stats" image="Chart" id="R2c-Zp-4YK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oMw-09-Bbg">
@@ -100,6 +99,7 @@
                         <segue destination="qnw-LX-4lj" kind="relationship" relationship="rootViewController" id="uHO-HN-cTy"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biQ-Dk-etl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2032" y="72"/>
         </scene>
@@ -327,6 +327,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1W-wu-wdF">
+                                            <rect key="frame" x="316" y="22" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Select"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="enterBest:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="7J8-QI-oGA"/>
+                                                <segue destination="dyf-RQ-ESy" kind="show" id="s1u-bS-cen"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.26274509800000001" green="0.62745098040000002" blue="0.2784313725" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -349,6 +364,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrx-tX-bdv">
+                                            <rect key="frame" x="316" y="22" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Select"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="enterVeryGood:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="jgO-sD-zuG"/>
+                                                <segue destination="dyf-RQ-ESy" kind="show" id="vR5-Cv-DxK"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.70196078429999997" blue="0.25882352939999997" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -371,6 +401,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcO-ag-Ow9">
+                                            <rect key="frame" x="316" y="22" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Select"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="enterGood:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="oao-X3-aUT"/>
+                                                <segue destination="dyf-RQ-ESy" kind="show" id="u6N-E5-gey"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.79215686269999996" blue="0.20000000000000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -393,6 +438,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-00-Lov">
+                                            <rect key="frame" x="316" y="22" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Select"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="enterNeutral:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="BnE-tf-V5e"/>
+                                                <segue destination="dyf-RQ-ESy" kind="show" id="6gM-PL-iyN"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -415,6 +475,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLR-cC-piZ">
+                                            <rect key="frame" x="316" y="22" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Select"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="enterBad:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="hXl-Pj-hm4"/>
+                                                <segue destination="dyf-RQ-ESy" kind="show" id="feN-Ny-gY8"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98431372549999996" green="0.54901960780000003" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -437,6 +512,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhs-2E-WYZ">
+                                            <rect key="frame" x="316" y="22" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Select"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="enterVeryBad:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="aT2-60-QqP"/>
+                                                <segue destination="dyf-RQ-ESy" kind="show" id="ceC-VH-glK"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -459,6 +549,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV0-jK-mJS">
+                                            <rect key="frame" x="316" y="22" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Select"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="enterWorst:" destination="tLF-Sg-L5y" eventType="touchUpInside" id="lVa-li-IxR"/>
+                                                <segue destination="dyf-RQ-ESy" kind="show" id="EHl-sO-vBE"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.8980392157" green="0.22352941179999999" blue="0.20784313730000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -541,22 +646,24 @@
             <point key="canvasLocation" x="20" y="736.49289099526061"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="cqo-DQ-JHG">
+        <scene sceneID="hn7-pE-7hR">
             <objects>
-                <viewController id="AcK-gX-K9E" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4yo-Mw-oUd">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                <viewController id="dyf-RQ-ESy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kZo-b2-d8W">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Z3f-3s-1KK"/>
+                        <viewLayoutGuide key="safeArea" id="cLg-ox-Qs3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vsx-7g-fBz"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qDL-PD-c8m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Hy-W1-yk7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1362" y="736"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ceC-VH-glK"/>
         <segue reference="RdI-bv-57Y"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
