@@ -6,8 +6,9 @@
 //
 
 #import "StatsViewController.h"
+#import <FSCalendar/FSCalendar.h>
 
-@interface StatsViewController ()
+@interface StatsViewController () <FSCalendarDelegate, FSCalendarDataSource>
 
 @property (weak, nonatomic) IBOutlet UIView *calendarView;
 @property (weak, nonatomic) IBOutlet UIView *chartView;
@@ -29,6 +30,12 @@
         self.calendarView.alpha = 0;
         self.chartView.alpha = 1;
     }
+}
+
+- (void)calendar:(FSCalendar *)calendar boundingRectWillChange:(CGRect)bounds animated:(BOOL)animated
+{
+    calendar.frame = (CGRect){calendar.frame.origin,bounds.size};
+    // Do other updates here
 }
 
 /*

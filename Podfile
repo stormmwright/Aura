@@ -7,6 +7,7 @@ target 'Aura' do
 
   # Pods for Aura
   pod 'Parse'
+  pod 'FSCalendar'
 
   target 'AuraTests' do
     inherit! :search_paths
