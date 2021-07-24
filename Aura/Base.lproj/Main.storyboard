@@ -158,13 +158,29 @@
             </objects>
             <point key="canvasLocation" x="1697" y="-1268"/>
         </scene>
-        <!--View Controller-->
+        <!--Stats View Controller-->
         <scene sceneID="DZT-7J-J2Y">
             <objects>
-                <viewController id="qnw-LX-4lj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatsViewController" id="qnw-LX-4lj" customClass="StatsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NU-as-hP9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G9K-S5-txj">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="KTQ-rO-lLb" kind="embed" id="VnL-PY-pXn"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aqh-FH-CRe">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="h46-zM-7e3" kind="embed" id="otZ-4I-1xk"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="p33-eK-pxi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -177,8 +193,15 @@
                                 <segment title="Calendar"/>
                                 <segment title="Chart"/>
                             </segments>
+                            <connections>
+                                <action selector="switchViews:" destination="qnw-LX-4lj" eventType="valueChanged" id="ZSQ-Bb-07s"/>
+                            </connections>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="calendarView" destination="G9K-S5-txj" id="ldE-nX-eV9"/>
+                        <outlet property="chartView" destination="Aqh-FH-CRe" id="FWe-s5-fo4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oq9-58-Wmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,21 +223,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeE-fh-O3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3375" y="72"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="rRh-SB-i1I">
-            <objects>
-                <viewController id="2yd-I4-hck" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jqP-4c-KFj">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="qeS-IG-4im"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2rz-Q9-ye8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2705" y="736"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JRY-wJ-e4D">
@@ -681,6 +689,34 @@
             </objects>
             <point key="canvasLocation" x="1361.5384615384614" y="735.78199052132697"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3m3-if-S6z">
+            <objects>
+                <viewController id="KTQ-rO-lLb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NNS-Lp-Mwh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2K-2c-e5K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="736"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3kh-3h-UkF">
+            <objects>
+                <viewController id="h46-zM-7e3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jrh-Ze-L50">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHB-Ti-xZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3032" y="736"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="ceC-VH-glK"/>
@@ -703,6 +739,12 @@
         <image name="Very Satisfied" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
