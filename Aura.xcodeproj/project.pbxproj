@@ -22,6 +22,7 @@
 		82F26A8E26A0AC7200AFFCFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A8D26A0AC7200AFFCFD /* main.m */; };
 		82F26A9826A0AC7200AFFCFD /* AuraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A9726A0AC7200AFFCFD /* AuraTests.m */; };
 		82F26AA326A0AC7200AFFCFD /* AuraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26AA226A0AC7200AFFCFD /* AuraUITests.m */; };
+		82F595D826ACF41800CC22BC /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F595D726ACF41800CC22BC /* CalendarViewController.m */; };
 		B93019633A0D5ECA362AB4DF /* Pods_Aura_AuraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809EB58D320C2E9B389014C /* Pods_Aura_AuraUITests.framework */; };
 		FC01249722FA5AC8C1BC7ED6 /* Pods_AuraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE02D2AD3543A8C668E90F /* Pods_AuraTests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,8 @@
 		82F26A9E26A0AC7200AFFCFD /* AuraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F26AA226A0AC7200AFFCFD /* AuraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuraUITests.m; sourceTree = "<group>"; };
 		82F26AA426A0AC7200AFFCFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82F595D626ACF41800CC22BC /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		82F595D726ACF41800CC22BC /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		FE71E1F19B47C9B7DC2297D3 /* Pods-AuraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuraTests.debug.xcconfig"; path = "Target Support Files/Pods-AuraTests/Pods-AuraTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +140,8 @@
 				8286C94D26AA3BF500719F5D /* SettingsViewController.m */,
 				8286C95926ACBB6400719F5D /* StatsViewController.h */,
 				8286C95A26ACBB6400719F5D /* StatsViewController.m */,
+				82F595D626ACF41800CC22BC /* CalendarViewController.h */,
+				82F595D726ACF41800CC22BC /* CalendarViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -471,6 +476,7 @@
 				82F26A8026A0AC7100AFFCFD /* SceneDelegate.m in Sources */,
 				8286C94B26AA1ECD00719F5D /* HomeViewController.m in Sources */,
 				8286C94E26AA3BF500719F5D /* SettingsViewController.m in Sources */,
+				82F595D826ACF41800CC22BC /* CalendarViewController.m in Sources */,
 				8286C95B26ACBB6400719F5D /* StatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

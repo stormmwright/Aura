@@ -1,34 +1,30 @@
 //
-//  StatsViewController.m
+//  CalendarViewController.m
 //  Aura
 //
 //  Created by Storm Wright on 7/24/21.
 //
 
-#import "StatsViewController.h"
+#import "CalendarViewController.h"
+#import <FSCalendar/FSCalendar.h>
 
-@interface StatsViewController ()
+@interface CalendarViewController () <FSCalendarDelegate, FSCalendarDataSource>
 
-@property (weak, nonatomic) IBOutlet UIView *calendarView;
-@property (weak, nonatomic) IBOutlet UIView *chartView;
+@property (weak, nonatomic) IBOutlet FSCalendar *calendar;
 
 @end
 
-@implementation StatsViewController
+@implementation CalendarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (IBAction)switchViews:(UISegmentedControl *)sender {
-    if (sender.selectedSegmentIndex == 0) {
-        self.calendarView.alpha = 1;
-        self.chartView.alpha = 0;
-    } else {
-        self.calendarView.alpha = 0;
-        self.chartView.alpha = 1;
-    }
+- (void)calendar:(FSCalendar *)calendar boundingRectWillChange:(CGRect)bounds animated:(BOOL)animated
+{
+    calendar.frame = (CGRect){calendar.frame.origin,bounds.size};
+    // Do other updates here
 }
 
 /*
