@@ -23,6 +23,7 @@
 		82F26A9826A0AC7200AFFCFD /* AuraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A9726A0AC7200AFFCFD /* AuraTests.m */; };
 		82F26AA326A0AC7200AFFCFD /* AuraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26AA226A0AC7200AFFCFD /* AuraUITests.m */; };
 		82F595D826ACF41800CC22BC /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F595D726ACF41800CC22BC /* CalendarViewController.m */; };
+		82F595DB26AD19AC00CC22BC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F595DA26AD19AC00CC22BC /* HealthKit.framework */; };
 		B93019633A0D5ECA362AB4DF /* Pods_Aura_AuraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809EB58D320C2E9B389014C /* Pods_Aura_AuraUITests.framework */; };
 		FC01249722FA5AC8C1BC7ED6 /* Pods_AuraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE02D2AD3543A8C668E90F /* Pods_AuraTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,8 @@
 		82F26AA426A0AC7200AFFCFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F595D626ACF41800CC22BC /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		82F595D726ACF41800CC22BC /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		82F595D926AD19AC00CC22BC /* Aura.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aura.entitlements; sourceTree = "<group>"; };
+		82F595DA26AD19AC00CC22BC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		FE71E1F19B47C9B7DC2297D3 /* Pods-AuraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuraTests.debug.xcconfig"; path = "Target Support Files/Pods-AuraTests/Pods-AuraTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DC372E3FD8FAC1076EDA9AC /* Pods_Aura.framework in Frameworks */,
+				82F595DB26AD19AC00CC22BC /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +191,7 @@
 		82F26A7A26A0AC7100AFFCFD /* Aura */ = {
 			isa = PBXGroup;
 			children = (
+				82F595D926AD19AC00CC22BC /* Aura.entitlements */,
 				8286C95226AB603800719F5D /* Views */,
 				8286C94226A9FEC200719F5D /* Models */,
 				8286C94126A9FE8200719F5D /* View Controllers */,
@@ -224,6 +229,7 @@
 		F1A1EEBDA2D05B8F4DA31B06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82F595DA26AD19AC00CC22BC /* HealthKit.framework */,
 				4DCB9621AF3EA9854102EA3F /* Pods_Aura.framework */,
 				1809EB58D320C2E9B389014C /* Pods_Aura_AuraUITests.framework */,
 				4EDE02D2AD3543A8C668E90F /* Pods_AuraTests.framework */,
@@ -650,6 +656,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Aura/Aura.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5B7Z86KL9Q;
 				INFOPLIST_FILE = Aura/Info.plist;
@@ -669,6 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Aura/Aura.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5B7Z86KL9Q;
 				INFOPLIST_FILE = Aura/Info.plist;
