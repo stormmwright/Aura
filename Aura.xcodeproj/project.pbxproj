@@ -24,6 +24,8 @@
 		82F26AA326A0AC7200AFFCFD /* AuraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26AA226A0AC7200AFFCFD /* AuraUITests.m */; };
 		82F595D826ACF41800CC22BC /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F595D726ACF41800CC22BC /* CalendarViewController.m */; };
 		82F595DB26AD19AC00CC22BC /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F595DA26AD19AC00CC22BC /* HealthKit.framework */; };
+		82FC868426B1E69900A48279 /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FC868326B1E69900A48279 /* HealthKitManager.m */; };
+		82FC868726B1EC9100A48279 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FC868626B1EC9100A48279 /* ProfileViewController.m */; };
 		B93019633A0D5ECA362AB4DF /* Pods_Aura_AuraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1809EB58D320C2E9B389014C /* Pods_Aura_AuraUITests.framework */; };
 		FC01249722FA5AC8C1BC7ED6 /* Pods_AuraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDE02D2AD3543A8C668E90F /* Pods_AuraTests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,10 @@
 		82F595D726ACF41800CC22BC /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		82F595D926AD19AC00CC22BC /* Aura.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aura.entitlements; sourceTree = "<group>"; };
 		82F595DA26AD19AC00CC22BC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		82FC868226B1E69900A48279 /* HealthKitManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitManager.h; sourceTree = "<group>"; };
+		82FC868326B1E69900A48279 /* HealthKitManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthKitManager.m; sourceTree = "<group>"; };
+		82FC868526B1EC9100A48279 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		82FC868626B1EC9100A48279 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		FE71E1F19B47C9B7DC2297D3 /* Pods-AuraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuraTests.debug.xcconfig"; path = "Target Support Files/Pods-AuraTests/Pods-AuraTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,12 +146,14 @@
 				8286C94726AA1B9000719F5D /* SignUpViewController.m */,
 				8286C94926AA1ECD00719F5D /* HomeViewController.h */,
 				8286C94A26AA1ECD00719F5D /* HomeViewController.m */,
-				8286C94C26AA3BF500719F5D /* SettingsViewController.h */,
-				8286C94D26AA3BF500719F5D /* SettingsViewController.m */,
 				8286C95926ACBB6400719F5D /* StatsViewController.h */,
 				8286C95A26ACBB6400719F5D /* StatsViewController.m */,
 				82F595D626ACF41800CC22BC /* CalendarViewController.h */,
 				82F595D726ACF41800CC22BC /* CalendarViewController.m */,
+				82FC868526B1EC9100A48279 /* ProfileViewController.h */,
+				82FC868626B1EC9100A48279 /* ProfileViewController.m */,
+				8286C94C26AA3BF500719F5D /* SettingsViewController.h */,
+				8286C94D26AA3BF500719F5D /* SettingsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 		82F26A7A26A0AC7100AFFCFD /* Aura */ = {
 			isa = PBXGroup;
 			children = (
+				82FC868126B1E56000A48279 /* HealthKit */,
 				82F595D926AD19AC00CC22BC /* Aura.entitlements */,
 				8286C95226AB603800719F5D /* Views */,
 				8286C94226A9FEC200719F5D /* Models */,
@@ -224,6 +233,15 @@
 				82F26AA426A0AC7200AFFCFD /* Info.plist */,
 			);
 			path = AuraUITests;
+			sourceTree = "<group>";
+		};
+		82FC868126B1E56000A48279 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				82FC868226B1E69900A48279 /* HealthKitManager.h */,
+				82FC868326B1E69900A48279 /* HealthKitManager.m */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		F1A1EEBDA2D05B8F4DA31B06 /* Frameworks */ = {
@@ -483,6 +501,8 @@
 				8286C94B26AA1ECD00719F5D /* HomeViewController.m in Sources */,
 				8286C94E26AA3BF500719F5D /* SettingsViewController.m in Sources */,
 				82F595D826ACF41800CC22BC /* CalendarViewController.m in Sources */,
+				82FC868426B1E69900A48279 /* HealthKitManager.m in Sources */,
+				82FC868726B1EC9100A48279 /* ProfileViewController.m in Sources */,
 				8286C95B26ACBB6400719F5D /* StatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
