@@ -6,6 +6,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "HealthKitManager.h"
 
 @interface ProfileViewController ()
 
@@ -15,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [[HealthKitManager sharedManager] requestAuth];
 }
 
 /*
