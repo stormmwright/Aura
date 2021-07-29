@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)requestAuth;
 
+- (void)getStepCount;
+
 @end
 
 NS_ASSUME_NONNULL_END

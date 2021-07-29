@@ -37,10 +37,53 @@
                                              readTypes:[NSSet setWithArray:allTypes] completion:nil];
 }
 
-//- (double)readStepCount {
-//    NSError *error;
-//    HKQuantityType *stepCount = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
-//
-//}
+- (void)getStepCount {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *interval = [[NSDateComponents alloc] init];
+    interval.day = 7;
+
+    // set the anchor for 12 a.m. on Sunday
+    NSDateComponents *anchorComponents = [calendar components:NSCalendarUnitTimeZone | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitWeekday fromDate:[NSDate date]];
+    anchorComponents.timeZone = calendar.timeZone;
+    anchorComponents.hour = 0;
+    anchorComponents.minute = 0;
+    anchorComponents.second = 0;
+    anchorComponents.weekday = 1;
+    
+    
+    NSDate *anchorDate = [calendar dateFromComponents:anchorComponents];
+    HKQuantityType *quantityType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
+
+    // create the query
+    HKStatisticsCollectionQuery *query = [[HKStatisticsCollectionQuery alloc] initWithQuantityType:quantityType quantitySamplePredicate:nil options:HKStatisticsOptionCumulativeSum anchorDate:anchorDate intervalComponents:interval];
+
+    // set the results handler
+    query.initialResultsHandler = ^(HKStatisticsCollectionQuery *query, HKStatisticsCollection *results, NSError *error) {
+        if (error) {
+            // perform proper error handling here
+            NSLog(@"*** An error occurred while calculating the statistics: %@ ***",error.localizedDescription);
+        }
+
+        NSDate *endDate = [NSDate date];
+        NSDate *startDate = [calendar dateByAddingComponents:anchorComponents toDate:endDate options:0];
+
+        // plot the daily step counts over the past 7 days
+        [results enumerateStatisticsFromDate:startDate
+                                      toDate:endDate
+                                   withBlock:^(HKStatistics *result, BOOL *stop) {
+
+                                       HKQuantity *quantity = result.sumQuantity;
+                                       if (quantity) {
+                                           NSDate *date = result.startDate;
+                                           double value = [quantity doubleValueForUnit:[HKUnit countUnit]];
+                                           NSLog(@"%@: %f", date, value);
+                                           NSLog(@"You have taken %f steps this week. The week started on %@.", date, value);
+                                       }
+
+                                   }];
+    };
+
+    [self.healthStore executeQuery:query];
+}
 
 @end
