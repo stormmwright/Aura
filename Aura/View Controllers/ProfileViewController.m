@@ -18,7 +18,6 @@
     [super viewDidLoad];
     
     [[HealthKitManager sharedManager] requestAuth];
-    [[HealthKitManager sharedManager] findCorrelation];
 }
 
 /*

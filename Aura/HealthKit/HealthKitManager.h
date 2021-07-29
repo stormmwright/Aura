@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)requestAuth;
 
-- (void)findCorrelation;
-
 @end
 
 NS_ASSUME_NONNULL_END
