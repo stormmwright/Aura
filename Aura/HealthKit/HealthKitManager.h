@@ -18,6 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)getStepCount;
 
+- (void)getPushCount;
+
+- (void)getWeight;
+
+- (void)getSleepTime;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,6 +14,9 @@
 		8286C94E26AA3BF500719F5D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C94D26AA3BF500719F5D /* SettingsViewController.m */; };
 		8286C95826AB8E4700719F5D /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C95726AB8E4700719F5D /* Entry.m */; };
 		8286C95B26ACBB6400719F5D /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C95A26ACBB6400719F5D /* StatsViewController.m */; };
+		82F0C0DA26B4655300BDD00A /* HealthKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0C0D926B4655300BDD00A /* HealthKitViewController.m */; };
+		82F0C0E926B46E2200BDD00A /* HealthKitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0C0E826B46E2200BDD00A /* HealthKitCell.m */; };
+		82F0C0EF26B46EBD00BDD00A /* Steps.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0C0EE26B46EBD00BDD00A /* Steps.m */; };
 		82F26A7D26A0AC7100AFFCFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A7C26A0AC7100AFFCFD /* AppDelegate.m */; };
 		82F26A8026A0AC7100AFFCFD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F26A7F26A0AC7100AFFCFD /* SceneDelegate.m */; };
 		82F26A8626A0AC7100AFFCFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82F26A8426A0AC7100AFFCFD /* Main.storyboard */; };
@@ -68,6 +71,12 @@
 		8286C95726AB8E4700719F5D /* Entry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		8286C95926ACBB6400719F5D /* StatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
 		8286C95A26ACBB6400719F5D /* StatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		82F0C0D826B4655300BDD00A /* HealthKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitViewController.h; sourceTree = "<group>"; };
+		82F0C0D926B4655300BDD00A /* HealthKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthKitViewController.m; sourceTree = "<group>"; };
+		82F0C0E726B46E2200BDD00A /* HealthKitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitCell.h; sourceTree = "<group>"; };
+		82F0C0E826B46E2200BDD00A /* HealthKitCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthKitCell.m; sourceTree = "<group>"; };
+		82F0C0ED26B46EBD00BDD00A /* Steps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Steps.h; sourceTree = "<group>"; };
+		82F0C0EE26B46EBD00BDD00A /* Steps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Steps.m; sourceTree = "<group>"; };
 		82F26A7826A0AC7100AFFCFD /* Aura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F26A7B26A0AC7100AFFCFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82F26A7C26A0AC7100AFFCFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +163,8 @@
 				82FC868626B1EC9100A48279 /* ProfileViewController.m */,
 				8286C94C26AA3BF500719F5D /* SettingsViewController.h */,
 				8286C94D26AA3BF500719F5D /* SettingsViewController.m */,
+				82F0C0D826B4655300BDD00A /* HealthKitViewController.h */,
+				82F0C0D926B4655300BDD00A /* HealthKitViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -163,6 +174,8 @@
 			children = (
 				8286C95626AB8E4700719F5D /* Entry.h */,
 				8286C95726AB8E4700719F5D /* Entry.m */,
+				82F0C0ED26B46EBD00BDD00A /* Steps.h */,
+				82F0C0EE26B46EBD00BDD00A /* Steps.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +183,8 @@
 		8286C95226AB603800719F5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				82F0C0E726B46E2200BDD00A /* HealthKitCell.h */,
+				82F0C0E826B46E2200BDD00A /* HealthKitCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -493,12 +508,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8286C94526AA0EB800719F5D /* LogInViewController.m in Sources */,
+				82F0C0DA26B4655300BDD00A /* HealthKitViewController.m in Sources */,
 				8286C94826AA1B9000719F5D /* SignUpViewController.m in Sources */,
+				82F0C0EF26B46EBD00BDD00A /* Steps.m in Sources */,
 				82F26A7D26A0AC7100AFFCFD /* AppDelegate.m in Sources */,
 				82F26A8E26A0AC7200AFFCFD /* main.m in Sources */,
 				8286C95826AB8E4700719F5D /* Entry.m in Sources */,
 				82F26A8026A0AC7100AFFCFD /* SceneDelegate.m in Sources */,
 				8286C94B26AA1ECD00719F5D /* HomeViewController.m in Sources */,
+				82F0C0E926B46E2200BDD00A /* HealthKitCell.m in Sources */,
 				8286C94E26AA3BF500719F5D /* SettingsViewController.m in Sources */,
 				82F595D826ACF41800CC22BC /* CalendarViewController.m in Sources */,
 				82FC868426B1E69900A48279 /* HealthKitManager.m in Sources */,

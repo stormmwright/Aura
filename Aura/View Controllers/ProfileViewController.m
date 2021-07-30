@@ -6,9 +6,10 @@
 //
 
 #import "ProfileViewController.h"
-#import "HealthKitManager.h"
 
 @interface ProfileViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,9 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[HealthKitManager sharedManager] requestAuth];
-    [[HealthKitManager sharedManager] getStepCount];
+}
+
+- (void)getResources {
+    // *if* >= *1/3 of 7 (2)* week entries are mild (good, very good, best), moderate (neutral), or severe (bad, very bad, worst), *then* present 1-3 of static _resources_ based on their entry stats
 }
 
 /*
