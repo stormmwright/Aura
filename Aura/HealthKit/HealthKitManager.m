@@ -37,7 +37,7 @@
                                              readTypes:[NSSet setWithArray:allTypes] completion:nil];
 }
 
-- (void)getStepCount {
+- (void)getStepCountWithCompletion:(void(^)(double value, NSError *error))completion {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *interval = [calendar components:NSCalendarUnitDay fromDate:[NSDate date]];
     interval.day = 7;
@@ -76,10 +76,12 @@
                                        if (quantity) {
                                            NSDate *date = result.startDate;
                                            double value = [quantity doubleValueForUnit:[HKUnit countUnit]];
+                                           completion(value, nil);
                                            NSLog(@"Start Date: %@", date);
                                            NSLog(@"Sum Quantity: %.0f", value);
                                        } else {
-                                           NSLog(@"Null");
+                                           NSLog(@"Start Date: Null");
+                                           NSLog(@"Sum Quantity: 0");
                                        }
 
                                    }];
@@ -130,7 +132,8 @@
                                            NSLog(@"Start Date: %@", date);
                                            NSLog(@"Sum Quantity: %.0f", value);
                                        } else {
-                                           NSLog(@"Null");
+                                           NSLog(@"Start Date: Null");
+                                           NSLog(@"Sum Quantity: 0");
                                        }
 
                                    }];
@@ -140,13 +143,13 @@
 }
 
 - (void)getWeight {
-    NSLog(@"Start Date: ");
-    NSLog(@"Sum Quantity: ");
+    NSLog(@"Start Date: Null");
+    NSLog(@"Sum Quantity: 0");
 }
 
 - (void)getSleepTime {
-    NSLog(@"Start Date: ");
-    NSLog(@"Sum Quantity: ");
+    NSLog(@"Start Date: Null");
+    NSLog(@"Sum Quantity: 0");
 }
 
 @end

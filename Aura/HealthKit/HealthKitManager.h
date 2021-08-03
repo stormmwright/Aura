@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)requestAuth;
 
-- (void)getStepCount;
+- (void)getStepCountWithCompletion:(void(^)(double value, NSError *error))completion;
 
 - (void)getPushCount;
 
