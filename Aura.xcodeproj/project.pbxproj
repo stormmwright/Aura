@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5DC372E3FD8FAC1076EDA9AC /* Pods_Aura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCB9621AF3EA9854102EA3F /* Pods_Aura.framework */; };
+		826CDAAD26B99C94005D5FBD /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 826CDAAC26B99C94005D5FBD /* ChartViewController.m */; };
+		826CDAB026B9BA7F005D5FBD /* LoggedEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 826CDAAF26B9BA7F005D5FBD /* LoggedEntryViewController.m */; };
 		8286C94526AA0EB800719F5D /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C94426AA0EB800719F5D /* LogInViewController.m */; };
 		8286C94826AA1B9000719F5D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C94726AA1B9000719F5D /* SignUpViewController.m */; };
 		8286C94B26AA1ECD00719F5D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8286C94A26AA1ECD00719F5D /* HomeViewController.m */; };
@@ -59,6 +61,10 @@
 		6311E1A086401EDAB389F752 /* Pods-Aura-AuraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aura-AuraUITests.release.xcconfig"; path = "Target Support Files/Pods-Aura-AuraUITests/Pods-Aura-AuraUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6E4759B06E4ED306361FD962 /* Pods-Aura.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aura.debug.xcconfig"; path = "Target Support Files/Pods-Aura/Pods-Aura.debug.xcconfig"; sourceTree = "<group>"; };
 		8089A667749BBF3A35A8F03F /* Pods-Aura-AuraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aura-AuraUITests.debug.xcconfig"; path = "Target Support Files/Pods-Aura-AuraUITests/Pods-Aura-AuraUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		826CDAAB26B99C94005D5FBD /* ChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		826CDAAC26B99C94005D5FBD /* ChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		826CDAAE26B9BA7F005D5FBD /* LoggedEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggedEntryViewController.h; sourceTree = "<group>"; };
+		826CDAAF26B9BA7F005D5FBD /* LoggedEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggedEntryViewController.m; sourceTree = "<group>"; };
 		8286C94326AA0EB800719F5D /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		8286C94426AA0EB800719F5D /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		8286C94626AA1B9000719F5D /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -165,6 +171,10 @@
 				8286C94D26AA3BF500719F5D /* SettingsViewController.m */,
 				82F0C0D826B4655300BDD00A /* HealthKitViewController.h */,
 				82F0C0D926B4655300BDD00A /* HealthKitViewController.m */,
+				826CDAAB26B99C94005D5FBD /* ChartViewController.h */,
+				826CDAAC26B99C94005D5FBD /* ChartViewController.m */,
+				826CDAAE26B9BA7F005D5FBD /* LoggedEntryViewController.h */,
+				826CDAAF26B9BA7F005D5FBD /* LoggedEntryViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -508,6 +518,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8286C94526AA0EB800719F5D /* LogInViewController.m in Sources */,
+				826CDAB026B9BA7F005D5FBD /* LoggedEntryViewController.m in Sources */,
+				826CDAAD26B99C94005D5FBD /* ChartViewController.m in Sources */,
 				82F0C0DA26B4655300BDD00A /* HealthKitViewController.m in Sources */,
 				8286C94826AA1B9000719F5D /* SignUpViewController.m in Sources */,
 				82F0C0EF26B46EBD00BDD00A /* Steps.m in Sources */,

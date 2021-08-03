@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)getStepCountWithCompletion:(void(^)(double value, NSError *error))completion;
 
-- (void)getPushCount;
+- (void)getPushCountWithCompletion:(void(^)(double value, NSError *error))completion;
 
 - (void)getWeight;
 

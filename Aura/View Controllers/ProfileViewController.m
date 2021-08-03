@@ -99,16 +99,17 @@
     
 // *if* >= *1/3 of 7 (2)* week entries are mild (good, very good, best), moderate (neutral), or severe (bad, very bad, worst), *then* present 1-3 of static _resources_ based on their entry stats
 - (void)getResources {
-        [self getMoodDictionary];
-        
-        if ([self.mildModerateSevere[@"Mild"] intValue] >= 2) {
-            self.mildView.text = @"[Insert Mild Resource]";
-        } else if ([self.mildModerateSevere[@"Moderate"] intValue] >= 2) {
-            self.moderateView.text = @"[Insert Moderate Resource]";
-        } else if ([self.mildModerateSevere[@"Severe"] intValue] >= 2) {
-            self.severeView.text = @"[Insert Severe Resource]";
-        }
+    [self getMoodDictionary];
+    
+    // TODO: write static resources
+    if ([self.mildModerateSevere[@"Mild"] intValue] >= 2) {
+        self.mildView.text = @"[Insert Mild Resource]";
+    } else if ([self.mildModerateSevere[@"Moderate"] intValue] >= 2) {
+        self.moderateView.text = @"[Insert Moderate Resource]";
+    } else if ([self.mildModerateSevere[@"Severe"] intValue] >= 2) {
+        self.severeView.text = @"[Insert Severe Resource]";
     }
+}
 
 - (void)getHealthStats {
     [[HealthKitManager sharedManager] getStepCountWithCompletion:^(double value, NSError *error) {

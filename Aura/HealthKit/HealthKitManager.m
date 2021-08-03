@@ -90,7 +90,7 @@
     [self.healthStore executeQuery:query];
 }
 
-- (void)getPushCount {
+- (void)getPushCountWithCompletion:(void(^)(double value, NSError *error))completion {
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *interval = [calendar components:NSCalendarUnitDay fromDate:[NSDate date]];
     interval.day = 7;
@@ -129,6 +129,7 @@
                                        if (quantity) {
                                            NSDate *date = result.startDate;
                                            double value = [quantity doubleValueForUnit:[HKUnit countUnit]];
+                                           completion(value, nil);
                                            NSLog(@"Start Date: %@", date);
                                            NSLog(@"Sum Quantity: %.0f", value);
                                        } else {
@@ -142,14 +143,18 @@
     [self.healthStore executeQuery:query];
 }
 
+// TODO: get weight
 - (void)getWeight {
     NSLog(@"Start Date: Null");
     NSLog(@"Sum Quantity: 0");
 }
 
+// TODO: get sleep time
 - (void)getSleepTime {
     NSLog(@"Start Date: Null");
     NSLog(@"Sum Quantity: 0");
 }
+
+// TODO: get updates from HealthKit
 
 @end

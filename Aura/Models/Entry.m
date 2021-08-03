@@ -23,6 +23,13 @@
     newEntry.author = [PFUser currentUser];
     newEntry.mood = mood;
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+    // convert date to string
+    NSString *createdAtString = [formatter stringFromDate:newEntry.createdAt];
+    // convert string to date
+    newEntry.createdAt = [formatter dateFromString:createdAtString];
+    
     [newEntry saveInBackgroundWithBlock:completion];
 }
 

@@ -64,14 +64,25 @@
     }];
 }
 
+// TODO: update label with pushes
 - (IBAction)readPushes:(id)sender {
-    [[HealthKitManager sharedManager] getPushCount];
+    [[HealthKitManager sharedManager] getPushCountWithCompletion:^(double value, NSError *error) {
+        NSLog(@"%f", value);
+        if (value) {
+            NSNumber *pushCount = [NSNumber numberWithDouble:value];
+            
+            self.pushesLabel.text = [pushCount stringValue];
+            NSLog(@"%@", pushCount);
+        }
+    }];
 }
 
+// TODO: update label with weight
 - (IBAction)readWeight:(id)sender {
     [[HealthKitManager sharedManager] getWeight];
 }
 
+// TODO: update label with sleep time
 - (IBAction)readSleepTime:(id)sender {
     [[HealthKitManager sharedManager] getSleepTime];
 }
